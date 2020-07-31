@@ -1,0 +1,50 @@
+{% extends 'layout/layout.html' %}
+{% load static %}
+{% block content %}
+<center>
+<div class="card">
+    <div class="card-header">
+      Quote
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>정답은 가장 가까운 곳에 있다.</p>
+        <footer class="blockquote-footer"> Jong In Choi, <cite title="Source Title">the founder of Educative</cite></footer>
+      </blockquote>
+    </div>
+  </div>
+</center>
+
+
+  <div class="card mb-3" style="width: 710px; height: 410px; float: left; margin-left: 23px; margin-top: 10px;" >
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{% static 'image/jongin.jpg' %}" class="card-img" alt="최종인 사진" height=auto width=auto>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <h3 class="card-title"><strong>설립자:</strong> 최종인(Jong In Choi, Eric)</h3> 
+          <p class="card-text"><strong>출생 연도</strong>: 1999.09.17</p> <p><strong>출생지</strong>: Orange County, Los Angeles, California</p> 
+                    <p><strong>학력</strong>: Korea International School<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 서울 용강중학교<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+                    서울 동성고등학교 <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp경기대학교 토목공학과</p>
+                    <p><strong>주요 활동</strong>: KMUN2017 Delegate <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp KMUN2018 Administrative Staff <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 경기대학교 멋쟁이 사자처럼 8기(2020) </p>
+                                
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="width: 760px; height: 410px;  float: right ; margin-right: 23px;  margin-top: 10px;">
+    <div class="card-body">
+      <h3><strong>인사말</strong></h3>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam nulla iusto alias repellendus magni aliquid expedita dolore? Sunt recusandae, voluptate facilis nisi impedit tempore quos cumque explicabo voluptas delectus est! Lorem ipsum dolor sit amet consectetur adipisicing elit. In molestias aperiam asperiores beatae, facilis, quos consectetur quibusdam neque ducimus itaque, dicta consequatur perspiciatis praesentium dolores eos ex ut. Repellendus, facilis!<br><br>
+      <h3><strong>설립 계기</strong></h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum beatae sit officia placeat a soluta rem, temporibus qui quia perspiciatis non vel fuga reiciendis magni odio laboriosam dicta exercitationem id? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure mollitia repellendus voluptatibus excepturi at pariatur ratione sed quisquam architecto, esse suscipit et repudiandae ullam quod ipsam, nihil consequatur corrupti. Tempore.
+    
+    </div>
+  </div>
+  
+
+{% endblock %}

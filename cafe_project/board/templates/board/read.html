@@ -1,0 +1,67 @@
+{% extends 'layout/layout.html' %}
+{% block content %}
+<section class = 'container'>
+    <br>
+    <div class = "board" style = "float:left ;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Author</th>
+            <th scope="col">Title</th>
+            <th scope="col">Create Date</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for board in boards %}
+          <tr>
+            <th scope="row">{{board.pk}}</th>
+            <td>{{board.author.username}}</td>
+            <td><a href = "{% url 'board_read_one' board.pk %}" class = "title">{{board.title}}</a></td>
+            <td>{{board.create_at}}</td>
+          </tr>
+        {% endfor%}
+        </tbody>
+      </table>
+      
+    </div>
+
+    <div class = "bar" style = "float: right ;">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    </div>
+    
+
+<div class ="menu" style = "float: right; margin:10px ; ">
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    전체 게시물
+    <span class="badge badge-secondary badge-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    English
+    <span class="badge badge-secondary badge-pill">6</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Math&Engineering
+    <span class="badge badge-secondary badge-pill">3</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Web Programming
+    <span class="badge badge-secondary badge-pill">2</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Daily
+    <span class="badge badge-secondary badge-pill">3</span>
+  </li>
+</ul>
+</div>
+
+<div class ="bar2" style="margin:6px ;">
+  <a href="{% url 'board_create'%}" class="btn btn-outline-secondary my-2 my-sm-0">Create</a>
+  </div>
+
+</section>
+{% endblock %}

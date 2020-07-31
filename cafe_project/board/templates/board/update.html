@@ -1,0 +1,13 @@
+{% block content %}
+   <form action = "{% url 'board_update' board.pk %}" method = 'POST'>
+   {% csrf_token %}
+   <input type='text' name='title' value= '{{board.title}}'>
+   <input type='text' name='author' value= '{{board.author}}'>
+   <textarea name='content'>{{board.contents}}</textarea>
+   <button type = 'submit'>submit</button>
+   </form>
+    <h1>{{board.title}}</h1>   
+    <h2>{{board.author}}</h2>
+    <p>{{board.content}}</p>
+    <h3>{{board.create_at}}</h3>
+{% endblock %}  
